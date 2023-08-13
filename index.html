@@ -983,7 +983,8 @@
         flex-wrap: wrap; /* Adicionado para empilhar quando necessário */
         justify-content: center;
         align-items: flex-start;
-        transition: width .5s ease;
+        opacity: 1;
+        transition: width .5s ease, opacity 1s ease;
     }
 
     #news.closed {
@@ -1009,7 +1010,22 @@
         flex-wrap: wrap; /* Adicionado para empilhar quando necessário */
         justify-content: center;
         align-items: flex-start;
-        transition: width .5s ease;
+        opacity: 1;
+        transition: width .5s ease, opacity 1s ease;
+    }
+
+    @media screen and (max-width:980px) {
+        #cuphead.closed, #cuphead.open {
+            opacity: 0;
+            transition: width .5s ease, opacity 1s ease;
+        }
+    }
+
+    @media screen and (max-width:1092px) {
+        #cuphead.open {
+            opacity: 0;
+            transition: width .5s ease;
+        }
     }
 
     #news.open {
@@ -1017,7 +1033,7 @@
         height: 250px;
         position: absolute;
         top: 400px;
-        left: 200px;
+        left: 125px;
         display: flex;
         flex-wrap: wrap; /* Adicionado para empilhar quando necessário */
         justify-content: center;
@@ -2366,8 +2382,8 @@ function ativarConfiguracoes2() {
         <a href="#" style="color: rgba(107, 255, 84, 1)" id="option" onclick="toggleMenu(); scrollToPosition(2820);">Notícias</a>
         <a href="#" style="color: rgba(107, 255, 84, 1)" id="option" onclick="toggleMenu(); scrollToPosition(4500);">Avaliação</a>
         <a href="https://gamificacao-batepapo.000webhostapp.com/" style="color: rgba(107, 255, 84, 1)" id="option" onclick="toggleMenu()">Bate-Papo</a>
-        <a href="#" style="color: rgba(107, 255, 84, 1)" id="option" onclick="toggleMenu(); ativarConfiguracoes()">Configurações</a>
-        <a href="#" style="color: rgba(107, 255, 84, 1)" id="option" onclick="toggleMenu(); ativarConfiguracoes2()">Ajuda</a>
+        <a href="#" style="color: rgba(107, 255, 84, 1); font-size: 40px;" id="option" onclick="toggleMenu(); ativarConfiguracoes()">Atividade do Dia</a>
+        <a href="Guia 1.0.pdf" style="color: rgba(107, 255, 84, 1)" id="option" onclick="toggleMenu(); ativarConfiguracoes2()">Ajuda</a>
     </div>
    <div class="background">
     <span></span>
@@ -2563,8 +2579,14 @@ function ativarConfiguracoes2() {
             <div id="news" class="sitedescricao closed">
                 <div class="news-box">
                     <a href="Lançamento Oficial do Clube Juvenil de Gameficação.html">
-                        <p style="position: absolute; color: lightcyan; font-family: heavitas, sans-serif; bottom: 0px; transition: all 0.5s;">Lançamento Oficial do Clube Juvenil de Gameficação</p>
+                        <p style="position: absolute; color: lightcyan; font-family: heavitas, sans-serif; bottom: 0px; transition: all 0.5s; background-color: black;">Lançamento Oficial do Clube Juvenil de Gameficação</p>
                         <img src="https://pbs.twimg.com/profile_banners/1690383313221931008/1691854046/600x200" alt="Notícia 1">
+                    </a>
+                </div>
+                <div class="news-box">
+                    <a href="Atualizações sobre Mudanças no Site.html">
+                        <p style="position: absolute; color: lightcyan; font-family: heavitas, sans-serif; bottom: 0px; transition: all 0.5s; background-color: black;">Atualizações sobre Mudanças no Site</p>
+                        <img src="https://img.freepik.com/premium-photo/light-penetrates-digital-earth-futuristic-technology-background-turntable_476006-4332.jpg" alt="Notícia 2">
                     </a>
                 </div>
         </div>
@@ -2588,13 +2610,14 @@ function ativarConfiguracoes2() {
     
 </div>
 <div id="configuracoes">
-    <h2 id="titleconfig">Configurações</h2>
-    <h2 id="configdescription">Essa funcionalidade ainda está em desenvolvimento...</h2>
+    <h2 id="titleconfig">Atividade do Dia</h2>
+    <h2 id="configdescription" style="font-size: 15px; top: 150px; width: 600px;">Dentro do Jogo "Minecraft", construa uma casa com um sistema de armazenamento de itens e decorada ao seu gosto. Recompensa: 1 Bombom</h2>
+    <h2 id="configdescription" style="font-size: 15px; top: 275px; width: 600px;">Capacidades Treinadas:criatividade, resolução de problemas, noções de espaço, matemática básica, história da arquitetura, raciocínio espacial, coordenação mão-olho e colaboração.</h2>
     <button id="salvarConfig">Fechar</button>
 </div>
 <div id="ajuda">
     <h2 id="titleconfig">Ajuda</h2>
-    <h2 id="configdescription">Essa funcionalidade ainda está em desenvolvimento...</h2>
+    <h2 id="configdescription">Abre o Arquivo instalado.</h2>
     <button id="salvarConfig2">Fechar</button>
 </div>
 </body>
