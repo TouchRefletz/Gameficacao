@@ -102,7 +102,7 @@
 #notícias {
     background-color: #0fff83;
     width: 95%;
-    height: 700px;
+    height: 850px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -209,7 +209,7 @@
   }
 
   #notícias {
-    height: 1500px;
+    height: 1600px;
     top: 3600px;
     height: 1500px;
   }
@@ -329,7 +329,7 @@
     background-color: #0fff83;
     width: 800px; /* Largura inicial */
   max-width: 50%; /* Permite que a largura se ajuste automaticamente */
-    height: 1500px;
+    height: 1600px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -349,7 +349,7 @@
     display: flex;
     width: 100%; /* Largura inicial */
     height: 450px;
-    top: 4500px;
+    top: 4800px;
     background-color: rgb(93, 93, 93);
     left: 50%;
     transform: translate(-50%);
@@ -372,7 +372,7 @@
 }
 
 #textofundoredes {
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -481,7 +481,7 @@
             transform: scaleX(1.5); /* Ajuste o valor para aumentar ou diminuir a largura do texto */
             position: absolute;
             left: 300px;
-            top: 300px;
+            top: 1100px;
             text-align: center;
             left: 50%;
             transform: translateX(-50%) scaleX(1.5); /* Add translateX(-50%) */
@@ -502,9 +502,9 @@
             transform: scaleX(1.5); /* Ajuste o valor para aumentar ou diminuir a largura do texto */
             position: absolute;
             left: 0px;
-            top: 300px;
+            top: 1100px;
             text-align: center;
-            left: 47%;
+            left: 50%;
             transform: translateX(-50%) scaleX(1.5); /* Add translateX(-50%) */
             animation: 
             typing2 9.5s steps(5, end) infinite,
@@ -512,6 +512,136 @@
             overflow: hidden;
             white-space: nowrap;
             margin: 0 auto;
+        }
+
+        #atividade.closed {
+            font-family: 'VT323', monospace;
+            color: rgb(107, 255, 84);
+            text-align: center;
+            font-size: 45px;
+            letter-spacing: 5px;
+            transform: scaleX(1.5); /* Ajuste o valor para aumentar ou diminuir a largura do texto */
+            position: absolute;
+            left: 300px;
+            top: 300px;
+            text-align: center;
+            left: 50%;
+            transform: translateX(-50%) scaleX(1.5); /* Add translateX(-50%) */
+            animation: 
+            typing3 9.5s steps(5, end) infinite,
+            blink-caret .75s step-end infinite;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            transition: font-size 0.5s ease;
+        }
+
+        #atividade.open {
+            font-family: 'VT323', monospace;
+            color: rgb(107, 255, 84);
+            text-align: center;
+            font-size: 45px;
+            letter-spacing: 5px;
+            transform: scaleX(1.5); /* Ajuste o valor para aumentar ou diminuir a largura do texto */
+            position: absolute;
+            left: 0px;
+            top: 300px;
+            text-align: center;
+            left: 47%;
+            transform: translateX(-50%) scaleX(1.5); /* Add translateX(-50%) */
+            animation: 
+            typing3 9.5s steps(20, end) infinite,
+            blink-caret .75s step-end infinite;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            transition: font-size 0.5s ease;
+        }
+
+        #descriptionatividade.closed {
+            text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        top: 400px;
+        position: absolute;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'VT323', monospace;
+        color: rgb(107, 255, 84);
+        font-size: 30px;
+        letter-spacing: 5px;
+        transition: left 0.5s ease, transform 0.5s ease, font-size 0.5s ease;
+        }
+
+        #games.closed {
+            text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        top: 1300px;
+        position: absolute;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'VT323', monospace;
+        color: rgb(107, 255, 84);
+        font-size: 30px;
+        letter-spacing: 5px;
+        transition: left 0.5s ease, transform 0.5s ease, font-size 0.5s ease;
+        z-index: 999;
+        }
+
+        @media screen and (max-width:1300px) {
+            #descriptionatividade.closed, #descriptionatividade.open {
+                font-size:16px;
+            }
+            #atividade.closed, #atividade.open {
+                font-size:18px;
+            }
+        }
+
+        #descriptionatividade.open {
+            text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        top: 1200px;
+        position: absolute;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-55%);
+        font-family: 'VT323', monospace;
+        color: rgb(107, 255, 84);
+        font-size: 30px;
+        letter-spacing: 5px;
+        transition: left 0.5s ease, transform 0.5s ease, font-size 0.5s ease;
+        }
+
+        #games.open {
+            text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        top: 1200px;
+        position: absolute;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-55%);
+        font-family: 'VT323', monospace;
+        color: rgb(107, 255, 84);
+        font-size: 30px;
+        letter-spacing: 5px;
+        transition: left 0.5s ease, transform 0.5s ease, font-size 0.5s ease;
         }
 
         #sobre-nos {
@@ -523,7 +653,7 @@
             transform: scaleX(1.5); /* Ajuste o valor para aumentar ou diminuir a largura do texto */
             position: absolute;
             left: 300px;
-            top: 900px;
+            top: 1000px;
             text-align: center;
             left: 50%;
             transform: translateX(-50%) scaleX(1.5); /* Add translateX(-50%) */
@@ -770,14 +900,27 @@
         width: 100%;
         height: 250px;
         position: absolute;
-        top: 400px;
+        top: 1200px;
+        left: 0px;
+        display: flex;
+        flex-wrap: wrap; /* Adicionado para empilhar quando necessário */
+        justify-content: center;
+        align-items: flex-start;
+        transition: width .5s ease, opacity 1s ease;
+    }
+
+    #daygame.closed {
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        top: 800px;
         left: 0px;
         display: flex;
         flex-wrap: wrap; /* Adicionado para empilhar quando necessário */
         justify-content: center;
         align-items: flex-start;
         opacity: 1;
-        transition: width .5s ease, opacity 1s ease;
+        transition: width .5s ease, opacity 1s ease, left 1s ease;
     }
 
     #news.closed {
@@ -793,11 +936,25 @@
         transition: width .5s ease;
     }
 
+    #daygame.open {
+        width: 70%;
+        height: 250px;
+        position: absolute;
+        top: 800px;
+        left: 250px;
+        display: flex;
+        flex-wrap: wrap; /* Adicionado para empilhar quando necessário */
+        justify-content: center;
+        align-items: flex-start;
+        opacity: 1;
+        transition: width .5s ease, opacity 1s ease, left 1s ease;
+    }
+
     #cuphead.open {
         width: 70%;
         height: 250px;
         position: absolute;
-        top: 400px;
+        top: 1200px;
         left: 200px;
         display: flex;
         flex-wrap: wrap; /* Adicionado para empilhar quando necessário */
@@ -830,6 +987,21 @@
     overflow: hidden;
     max-width: calc(100% - 20px); /* Impede que o .game-box vá além da largura da #cuphead */
     transition: flex 0.3s, max-width 0.3s; /* Adiciona a transição para suavizar a mudança de tamanho */
+}
+
+#games-box {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    transition: width .5s ease, opacity 1s ease;
+    filter: blur(30px);
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .game-box img {
@@ -1035,8 +1207,8 @@
 
         @keyframes typing3 {
             0% { width: 0 }
-            7% { width: 252px }
-            100% { width: 252px }
+            7% { width: 402px }
+            100% { width: 402px }
         }
 
         @keyframes typing4 {
@@ -1819,6 +1991,53 @@ input:checked + .slider:before {
     }
         }
 
+        #codigoDesbloqueio {
+            border-radius: 50px;
+            position: absolute;
+            top: 1400px;
+            width: 800px;
+            height: 100px;
+            font-size: 50px;
+            text-align: center;
+            font-family: "VT323", monospace;
+        }
+
+        #btnDesbloquear {
+            top: 1550px;
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            border-radius: 50px;
+            font-size: 25px;
+            text-align: center;
+            font-family: "VT323", monospace;
+            background-color: #37ff00;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 650px) {
+            #btnDesbloquear {
+                width: 150px;
+                height: 25px;
+                font-size: 12.5px;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            #codigoDesbloqueio {
+                width: 400px;   
+                height: 50px;
+                font-size: 25px;
+                top: 1450px;
+            }
+            #games.closed {
+                font-size: 20px;
+            }
+        }
+
+        #codigoDesbloqueio.open, #btnDesbloquear.open, #games.open, #games.open, #lock.open {
+            pointer-events: none;
+            opacity: 0;
+        }
     </style>
         <script>
     function toggleMenu() {
@@ -1830,6 +2049,11 @@ input:checked + .slider:before {
       var título = document.getElementById("título");
       var slide = document.getElementById("slide");
       var elements = document.getElementsByClassName("sitedescricao");
+      var atividade = document.getElementById("descriptionatividade");
+      var codigoDesbloqueio = document.getElementById("codigoDesbloqueio");
+      var games = document.getElementById("games");
+      var btnDesbloquear = document.getElementById("btnDesbloquear");
+      var lock = document.getElementById("lock");
 
       // Verificar a largura da tela usando matchMedia
       var screenWidth = window.matchMedia("(max-width: 1650px)"); // Substitua o valor 768px pela largura desejada
@@ -1851,8 +2075,18 @@ input:checked + .slider:before {
             menu.style.display = "none";
             menu.classList.remove("open");
             slide.classList.remove("open");
+            atividade.classList.remove("open");
+            codigoDesbloqueio.classList.remove("open");
+            games.classList.remove("open");
+            btnDesbloquear.classList.remove("open");
+            lock.classList.remove("open");
             menu.classList.add("closed");
             slide.classList.add("closed");
+            atividade.classList.add("closed");
+            codigoDesbloqueio.classList.add("closed");
+            games.classList.add("closed");
+            btnDesbloquear.classList.add("closed");
+            lock.classList.add("closed");
 
             // Remove "open" class from all elements with class "sitedescricao"
             for (var i = 0; i < elements.length; i++) {
@@ -1890,8 +2124,18 @@ input:checked + .slider:before {
 
           menu.classList.remove("closed");
           slide.classList.remove("closed");
+          atividade.classList.remove("closed");
+          codigoDesbloqueio.classList.remove("closed");
+            games.classList.remove("closed");
+            btnDesbloquear.classList.remove("closed");
+            lock.classList.remove("closed");
           menu.classList.add("open");
           slide.classList.add("open");
+          atividade.classList.add("open");
+          codigoDesbloqueio.classList.add("open");
+            games.classList.add("open");
+            btnDesbloquear.classList.add("open");
+            lock.classList.add("open");
 
           // Remove "closed" class from all elements with class "sitedescricao"
           for (var i = 0; i < elements.length; i++) {
@@ -1928,8 +2172,18 @@ input:checked + .slider:before {
             menu.style.display = "none";
             menu.classList.remove("open");
             slide.classList.remove("open");
+            atividade.classList.remove("open");
+            codigoDesbloqueio.classList.remove("open");
+            games.classList.remove("open");
+            btnDesbloquear.classList.remove("open");
+            lock.classList.remove("open");
             menu.classList.add("closed");
             slide.classList.add("closed");
+            atividade.classList.add("closed");
+            codigoDesbloqueio.classList.add("closed");
+            games.classList.add("closed");
+            btnDesbloquear.classList.add("closed");
+            lock.classList.add("closed");
 
             // Remove "open" class from all elements with class "sitedescricao"
             for (var i = 0; i < elements.length; i++) {
@@ -1982,8 +2236,18 @@ input:checked + .slider:before {
 
           menu.classList.remove("closed");
           slide.classList.remove("closed");
+          atividade.classList.remove("closed");
+          codigoDesbloqueio.classList.remove("closed");
+            games.classList.remove("closed");
+            btnDesbloquear.classList.remove("closed");
+            lock.classList.remove("closed");
           menu.classList.add("open");
           slide.classList.add("open");
+          atividade.classList.add("open");
+          codigoDesbloqueio.classList.add("open");
+            games.classList.add("open");
+            btnDesbloquear.classList.add("open");
+            lock.classList.add("open");
 
           // Remove "closed" class from all elements with class "sitedescricao"
           for (var i = 0; i < elements.length; i++) {
@@ -2197,7 +2461,6 @@ function ativarConfiguracoes2() {
     }, 50);
   });
 }
-
     </script>
 </head>
 <body class="menu-closed transition-active">
@@ -2239,8 +2502,23 @@ function ativarConfiguracoes2() {
        <p id="título" class="closed">Gameficação</p>
        <div id="fundo" class="closed"></div>
     <div id="content">
+        <p id="atividade" class="sitedescricao closed">Atividade do Dia</p>
+        <div id="descriptionatividade" class="closed">Dentro do Jogo "Minecraft", utilize o Bate-Papo para trabalharem em equipe em um único mundo para chegar ao Nether.<br>Recompensa: 1 GamerCoin<br><br>Comunicação eficaz, Colaboração, Orientação espacial, Cálculos básicos, Conhecimento da história do jogo, Habilidade de pensar em três dimensões, Precisão nos movimentos, Trabalho em equipe.</div>
+        <div id="daygame" class="sitedescricao closed">  
+            <div class="game-box">
+                <p style="position: absolute; color: lightblue; background-color: rgba(0, 0, 0, 1)" id="textojogos">MULTIPLAYER</p>
+                <a href="https://mess.eu.org/play/">
+                    <img src="data:image/jpeg;base64,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" alt="Jogo 7">
+                </a>
+        </div>
+        <p id="games" class="sitedescricao closed">Os jogos estão bloqueados, insira código para desbloquear: (1 Gamercoin)</p>
+        <input type="password" id="codigoDesbloqueio" class="closed" placeholder="Código de desbloqueio" style="z-index: 999;">
+<button id="btnDesbloquear" class="closed" style="z-index: 999;">Desbloquear</button>
+<img id="lock" class="closed" src="https://cdn.icon-icons.com/icons2/621/PNG/512/lock-padlock-symbol-for-protect_icon-icons.com_56926.png" style="position: absolute; top: 1150px; z-index: 998;"></img>
+
         <p id="jogos" class="sitedescricao closed">Jogos</p>
         <div id="cuphead" class="sitedescricao closed">
+            <div id="games-box">
             <div class="game-box">
                 <a href="https://seducsp-my.sharepoint.com/:f:/g/personal/00001130132043sp_aluno_educacao_sp_gov_br/EqJj5kxCDz1MqN2Nroj6G8ABmMBz7IbckR2tr1UAeI2njw?e=eHopse">
                     <img src="https://o.qoo-img.com/storage.qoo-img.com/game/11742/ZoUr34wZ4n4i9XfoVSBec9lk4ZtjGIRq.jpg" alt="Jogo 1">
@@ -2305,16 +2583,12 @@ function ativarConfiguracoes2() {
                 </a>
             </div>
             <div class="game-box">
-                <a href="https://fnafgame.io/fnaf-2">
-                    <img src="https://play-lh.googleusercontent.com/GYcyLlHWoZumcal0WmDJJo2rCFyl3Y0mwXm0zaD-C9gC0PJGQMhzOKHfDUVlqSDlag" alt="Jogo 13">
-                </a>
-            </div>
-            <div class="game-box">
                 <p style="position: absolute; color: rgb(12, 255, 12); background-color: rgba(0, 0, 0, 1)" id="textojogos">TODOS OS JOGOS</p>
                 <a href="Todos os Jogos.html">
                     <img src="https://www.publicdomainpictures.net/pictures/130000/nahled/green-arrow.jpg" alt="Todos os Jogos">
                 </a>
             </div>
+        </div>
             
 
     <div>
@@ -2441,20 +2715,14 @@ function ativarConfiguracoes2() {
                     </a>
                 </div>
                 <div class="news-box">
-                    <a href="Notícias/Adições e alterações no Site.html">
-                        <p style="position: absolute; color: lightcyan; font-family: heavitas, sans-serif; bottom: 0px; transition: all 0.5s; background-color: black;">Adições e alterações no Site</p>
-                        <img src="https://res.cloudinary.com/people-matters/image/upload/fl_immutable_cache,w_624,h_351,q_auto,f_auto/v1611723380/1611723379.jpg" alt="Notícia 5">
-                    </a>
-                </div>
-                <div class="news-box">
-                    <a href="Notícias/Novidade - GamerCoins!.html">
-                        <p style="position: absolute; color: lightcyan; font-family: heavitas, sans-serif; bottom: 0px; transition: all 0.5s; background-color: black;">Novidade - GamerCoins!</p>
-                        <img src="https://static.vecteezy.com/system/resources/previews/007/145/462/original/futuristic-digital-money-with-logo-bitcoin-digital-currency-on-blue-background-vector.jpg" alt="Notícia 6">
+                    <a href="Todas as Notícias.html">
+                        <p style="position: absolute; color: rgb(46, 253, 0); font-family: heavitas, sans-serif; bottom: 0px; transition: all 0.5s; background-color: black;">Todas as Notícias</p>
+                        <img src="https://www.publicdomainpictures.net/pictures/130000/nahled/green-arrow.jpg" alt="Voltar ao Site">
                     </a>
                 </div>
         </div>
         
-        <div id="avaliacao" style="position: absolute; top: 1600px;">
+        <div id="avaliacao" style="position: absolute; top: 1800px;">
     <h1 id="avaliacaotexto">Avaliação</h1>
     <div id="divbotaoavaliacao">
         <button id="botaoavaliacao">Avaliar</button>
@@ -2463,6 +2731,40 @@ function ativarConfiguracoes2() {
             document.getElementById("botaoavaliacao").addEventListener("click", function() {
                 window.location.href = "https://forms.gle/gDC8PuV6qL9Vfgrw6";
             });
+            document.addEventListener('DOMContentLoaded', function() {
+    // Elementos da página
+    const codigoDesbloqueioInput = document.getElementById('codigoDesbloqueio');
+    const btnDesbloquear = document.getElementById('btnDesbloquear');
+    const gameBox = document.getElementById('games-box');
+    const games = document.getElementById('games');
+    const lock = document.getElementById('lock');
+
+    // Código de desbloqueio
+    const codigoCorreto = '5643ljdf72'; // Defina o código correto aqui
+
+    // Adicione um ouvinte de evento ao botão de desbloqueio
+    btnDesbloquear.addEventListener('click', function() {
+        const codigoInserido = codigoDesbloqueioInput.value;
+
+        if (codigoInserido === codigoCorreto) {
+            gameBox.style.filter = 'none';
+            gameBox.style.opacity = '1';
+            gameBox.style.pointerEvents = 'auto';
+            btnDesbloquear.style.opacity = '0';
+            btnDesbloquear.style.pointerEvents = 'none';
+            codigoDesbloqueioInput.style.opacity = '0';
+            codigoDesbloqueioInput.style.pointerEvents = 'none';
+            games.style.opacity = '0';
+            games.style.pointerEvents = 'none';
+            lock.style.opacity = '0';
+            lock.style.pointerEvents = 'none';
+            codigoDesbloqueioInput.value = ''; // Limpar o campo de entrada
+        } else {
+            alert('Código incorreto! O acesso aos jogos continua bloqueado.');
+        }
+    });
+});
+
         </script>        
     </div>
 </div>
