@@ -58,6 +58,28 @@
 }
 
 @media (max-width: 1876px) {
+    .slideshow-container {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+}
+@media (min-width: 2901px) {
+    .slideshow-container {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+        }
+
+        #slide.open {
+  opacity: 0;
+  transition: opacity 1s ease;
+  left: 10%;
+ position: absolute;
+ top: 1200px;
+}
+
+@media (max-width: 1876px) {
             #slide-2 {
   opacity: 0;
   transition: opacity 1s ease;
@@ -2589,238 +2611,60 @@ input[type=radio]#button-5-slide-3:checked~.arrows3#arrow-4-slide-3 { left: -73p
     }
 }
 
-@font-face {
-    font-family: 'WebSymbolsRegular';
-    src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot');
-    src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.woff') format('woff'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.ttf') format('truetype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont#WebSymbolsRegular') format('svg');
+* {box-sizing: border-box}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  left: -13.5%;
+  transition: opacity 1s ease;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
-
-* {
-    margin: 0;
-    padding: 0;
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-body {
-    background-image: url(https://subtlepatterns.com/patterns/dark_wall.png);
-    background-repeat: repeat;
-    height: 500px;
-    padding: 1px;
+/* Position the "next button" to the right */
+.next {
+  right: 420;
+  border-radius: 3px 0 0 3px;
 }
 
-h1 { color: white }
-
-#slideshow-wrap4 {
-    display: flex;
-    height: 320px;
-    min-width: 260px;
-    max-width: 640px;
-    margin: auto;
-    border: 12px rgba(255,255,240,1) solid;
-    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
-    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
-    box-shadow: 0px 0px 5px rgba(0,0,0,.8);
-    margin-top: 20px;
-    position: relative;
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
 }
 
-#slideshow-inner4 {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0,0,0);
-    overflow: hidden;
-    position: relative;
+.dot1, .dot2, .dot3, .dot4 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-#slideshow-inner4>ul {
-    list-style: none;
-    height: 100%;
-    width: 500%;
-    overflow: hidden;
-    position: relative;
-    left: 0px;
-    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-    -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-    -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-#slideshow-inner4>ul>li {
-    width: 20%;
-    height: 320px;
-    float: left;
-    position: relative;
-}
-
-#slideshow-inner4>ul>li>img {
-    margin: auto;
-    height: 100%;
-}
-
-#slideshow-wrap4 input[type=radio] {
-    position: absolute;
-    left: 50%;
-    bottom: 15px;
-    z-index: 100;
-    visibility: hidden;
-}
-
-#slideshow-wrap4 label:not(.arrows4):not(.show-description4-label) {
-    position: absolute;
-    left: 50%;
-    bottom: -45px;
-    z-index: 100;
-    width: 12px;
-    height: 12px;
-    background-color: rgba(200,200,200,1);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
-    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
-    box-shadow: 0px 0px 3px rgba(0,0,0,.8);
-    -webkit-transition: background-color .2s;
-    -moz-transition: background-color .2s;
-    -o-transition: background-color .2s;
-    transition: background-color .2s;
-}
-
-#slideshow-wrap4 label:not(.arrows4):active { bottom: -46px }
-
-#slideshow-wrap4 input[type=radio]#button-1-slide-4:checked~label[for=button-1-slide-4] { background-color: rgba(100,100,100,1) }
-
-#slideshow-wrap4 input[type=radio]#button-2-slide-4:checked~label[for=button-2-slide-4] { background-color: rgba(100,100,100,1) }
-
-#slideshow-wrap4 input[type=radio]#button-3-slide-4:checked~label[for=button-3-slide-4] { background-color: rgba(100,100,100,1) }
-
-#slideshow-wrap4 input[type=radio]#button-4-slide-4:checked~label[for=button-4-slide-4] { background-color: rgba(100,100,100,1) }
-
-#slideshow-wrap4 input[type=radio]#button-5-slide-4:checked~label[for=button-5-slide-4] { background-color: rgba(100,100,100,1) }
-
-#slideshow-wrap4 label[for=button-1-slide-4] { margin-left: -36px }
-
-#slideshow-wrap4 label[for=button-2-slide-4] { margin-left: -18px }
-
-#slideshow-wrap4 label[for=button-4-slide-4] { margin-left: 18px }
-
-#slideshow-wrap4 label[for=button-5-slide-4] { margin-left: 36px }
-
-#slideshow-wrap4 input[type=radio]#button-1-slide-4:checked~#slideshow-inner4>ul { left: 0 }
-
-#slideshow-wrap4 input[type=radio]#button-2-slide-4:checked~#slideshow-inner4>ul { left: -100% }
-
-#slideshow-wrap4 input[type=radio]#button-3-slide-4:checked~#slideshow-inner4>ul { left: -200% }
-
-#slideshow-wrap4 input[type=radio]#button-4-slide-4:checked~#slideshow-inner4>ul { left: -300% }
-
-#slideshow-wrap4 input[type=radio]#button-5-slide-4:checked~#slideshow-inner4>ul { left: -400% }
-
-label.arrows4 {
-    font-family: 'WebSymbolsRegular';
-    font-size: 25px;
-    color: rgb(255,255,240);
-    position: absolute;
-    top: 50%;
-    margin-top: -25px;
-    display: none;
-    opacity: 0.7;
-    cursor: pointer;
-    z-index: 1000;
-    background-color: transparent;
-    -webkit-transition: opacity .2s;
-    -moz-transition: opacity .2s;
-    -o-transition: opacity .2s;
-    transition: opacity .2s;
-    text-shadow: 0px 0px 3px rgba(0,0,0,.8);
-}
-
-label.arrows4:hover { opacity: 1 }
-
-label.arrows4:active { margin-top: -23px }
-
-input[type=radio]#button-1-slide-4:checked~.arrows4#arrow-2-slide-4, input[type=radio]#button-2-slide-4:checked~.arrows4#arrow-3-slide-4, input[type=radio]#button-3-slide-4:checked~.arrows4#arrow-4-slide-4, input[type=radio]#button-4-slide-4:checked~.arrows4#arrow-5-slide-4 {
-    right: -55px;
-    display: block;
-}
-
-input[type=radio]#button-2-slide-4:checked~.arrows4#arrow-1-slide-4, input[type=radio]#button-3-slide-4:checked~.arrows4#arrow-2-slide-4, input[type=radio]#button-4-slide-4:checked~.arrows4#arrow-3-slide-4, input[type=radio]#button-5-slide-4:checked~.arrows4#arrow-4-slide-4 {
-    left: -55px;
-    display: block;
-    -webkit-transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
-input[type=radio]#button-2-slide-4:checked~.arrows4#arrow-1-slide-4 { left: -19px }
-
-input[type=radio]#button-3-slide-4:checked~.arrows4#arrow-2-slide-4 { left: -37px }
-
-input[type=radio]#button-5-slide-4:checked~.arrows4#arrow-4-slide-4 { left: -73px }
-
-.description4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 260px;
-    font-family: 'Yanone Kaffeesatz';
-    z-index: 1000;
-}
-
-.description4 input { visibility: hidden }
-
-.description4 label {
-    font-family: 'WebSymbolsRegular';
-    background-color: rgba(255,255,240,1);
-    position: relative;
-    left: -17px;
-    top: 00px;
-    width: 40px;
-    height: 27px;
-    display: inline-block;
-    text-align: center;
-    padding-top: 7px;
-    border-bottom-right-radius: 15px;
-    cursor: pointer;
-    opacity: 0;
-    -webkit-transition: opacity .2s;
-    -moz-transition: opacity .2s;
-    -o-transition: opacity .2s;
-    transition: opacity .2s;
-    z-index: 5;
-    color: rgb(20,20,20);
-}
-
-#slideshow-inner4>ul>li:hover .description4 label { opacity: 1 }
-
-.description4 input[type=checkbox]:checked~label { opacity: 1 }
-
-.description4 .description4-text {
-    background-color: rgba(255,255,230,.5);
-    padding-left: 45px;
-    padding-top: 25px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    position: relative;
-    top: -35px;
-    z-index: 4;
-    opacity: 0;
-    -webkit-transition: opacity .2s;
-    -moz-transition: opacity .2s;
-    -o-transition: opacity .2s;
-    transition: opacity .2s;
-    color: rgb(20,20,20);
-}
-
-.description4 input[type=checkbox]:checked~.description4-text { opacity: 1 }
-
-@keyframes move {
-    100% {
-        transform: translate3d(0, 0, 1px) rotate(360deg);
-    }
+.active, .dot:hover, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover {
+  background-color: #717171;
 }
     </style>
         <script>
@@ -3280,331 +3124,175 @@ function ativarConfiguracoes2() {
             trabalhado dentro do<br>Clube Juvenil Gameficação<br>e como transformamos a 
             <br>educação, o aprender<br>e o aprendizado em algo<br>mais divertido e entretivo<br>para os alunos que
             <br>participaram do projeto.<br>Segue algumas imagens<br>sobre o Clube<br>Juvenil.</p>
-        <div id="slide" class="closed" style="top: 400px;">
-            <div id="slideshow-wrap">
-                <input type="radio" id="button-1" name="controls" checked="checked"/>
-                <label for="button-1"></label>
-                <input type="radio" id="button-2" name="controls"/>
-                <label for="button-2"></label>
-                <input type="radio" id="button-3" name="controls"/>
-                <label for="button-3"></label>
-                <input type="radio" id="button-4" name="controls"/>
-                <label for="button-4"></label>
-                <input type="radio" id="button-5" name="controls"/>
-                <label for="button-5"></label>
-                <label for="button-1" class="arrows" id="arrow-1">></label>
-                <label for="button-2" class="arrows" id="arrow-2">></label>
-                <label for="button-3" class="arrows" id="arrow-3">></label>
-                <label for="button-4" class="arrows" id="arrow-4">></label>
-                <label for="button-5" class="arrows" id="arrow-5">></label>
-                <div id="slideshow-inner">
-                    <ul>
-                        <li id="slide1">
-                            <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/650/171/full/banner.png?1698495422" />
-                            <div class="description">
-                                <input type="checkbox" id="show-description-1"/>
-                                <label for="show-description-1" class="show-description-label" style="font-size: 2vh;">?</label>
-                                <div class="description-text">
-                                    <h2>Banner com Logo do Clube Juvenil Gameficação</h2>
-                                    <p>Um banner com logo e nome do Clube Juvenil Gameficação.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="slide2">
-                            <iframe width="640" height="320" src="https://www.youtube.com/embed/mjPilAQZoy8" title="Vídeo de Apresentação do Clube Juvenil de Gameficação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>" />
-                            <div class="description">
-                                <input type="checkbox" id="show-description-2"/>
-                                <label for="show-description-2" class="show-description-label" style="font-size: 2vh;">?</label>
-                                <div class="description-text">
-                                    <h2>Vídeo de apresentação do Clube Juvenil Gameficação</h2>
-                                    <p>Vídeo apresentado aos membros do Clube de apresentação e lançamento do Clube Juvenil Gameficação</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="slide3">
-                            <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/650/175/full/bate-papo_banner.png?1698496083" />
-                            <div class="description">
-                                <input type="checkbox" id="show-description-3"/>
-                                <label for="show-description-3" class="show-description-label" style="font-size: 2vh;">?</label>
-                                <div class="description-text">
-                                    <h2>Gameficação - Bate-Papo</h2>
-                                    <p>Site que criamos para os alunos conseguirem conversar com privacidade dentro do Clube Juvenil Gameficação, Veja <a href="Bate-Papo.html" target="_blank">aqui.</a></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="slide4">
-                            <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/650/177/full/Lideran%C3%A7a_banner.png?1698496615" />
-                            <div class="description">
-                                <input type="checkbox" id="show-description-4"/>
-                                <label for="show-description-4" class="show-description-label" style="font-size: 2vh;">?</label>
-                                <div class="description-text">
-                                    <h2>Gameficação - Liderança</h2>
-                                    <p>Equipe de liderança do Clube Juvenil Gameficação.<br> *Os direitos de imagens de ambos são permitidos.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="slide5">
-                            <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/650/180/full/Games_banner.png?1698496965" />
-                            <div class="description">
-                                <input type="checkbox" id="show-description-5"/>
-                                <label for="show-description-5" class="show-description-label" style="font-size: 2vh;">?</label>
-                                <div class="description-text">
-                                    <h2>Gameficação - Games</h2>
-                                    <p>Todos os jogos que o Clube Juvenil Gameficação disponibilizou. Clique <a href="Todos os Jogos.html" target="_blank">aqui.</a></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="slideshow-container" style="top: 425px;">
+                <div class="mySlides4">
+                  <img src="https://uploaddeimagens.com.br/images/004/650/171/full/banner.png?1698495422" style="width:580px; height: 320px;">
                 </div>
+              
+                <div class="mySlides4">
+                  <iframe width="580" height="320" src="https://www.youtube.com/embed/mjPilAQZoy8" title="Vídeo de Apresentação do Clube Juvenil de Gameficação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>" />
+                </div>
+              
+                <div class="mySlides4">
+                    <img src="https://uploaddeimagens.com.br/images/004/650/175/full/bate-papo_banner.png?1698496083" style="width:580px; height: 320px;">
+                </div>
+                
+                <div class="mySlides4">
+                    <img src="https://uploaddeimagens.com.br/images/004/650/177/full/Lideran%C3%A7a_banner.png?1698496615" style="width:580px; height: 320px;">
+                  </div>
+    
+                  <div class="mySlides4">
+                    <img src="https://uploaddeimagens.com.br/images/004/650/180/full/Games_banner.png?1698496965" style="width:580px; height: 320px;">
+                  </div>
+              
+                <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+              </div>
+              <div style="text-align:center; position: absolute; top: 775px; left: 22.5%;" >
+                <span class="dot4" onclick="currentSlide(1, 3)"></span>
+                <span class="dot4" onclick="currentSlide(2, 3)"></span>
+                <span class="dot4" onclick="currentSlide(3, 3)"></span>
+                <span class="dot4" onclick="currentSlide(4, 3)"></span>
+                <span class="dot4" onclick="currentSlide(5, 3)"></span>
             </div>
-        </div>
-    </div>
     <p class="sitedescricao closed" id="sitedescrição" style="top: 1000px;">Na primeira aula<br>do Clube Juvenil<br>
         Gameficação, foi trabalhado<br>o conteúdo dentro do jogo<br>Minecraft, e como
         <br>construir uma pequena<br>casa dentro do jogo,<br>utilizando os conhecimentos<br>dos alunos para
         <br>uma dedicação maior<br>em construir uma casa<br>segundo o seu<br>gosto.</p>
-        <div id="slide-2" class="closed" style="top: 1000px;">            
-            <div id="slideshow-wrap2">
-                <input type="radio" id="button-1-slide-2" name="controls" checked="checked"/>
-                <label for="button-1-slide-2"></label>
-                <input type="radio" id="button-2-slide-2" name="controls"/>
-                <label for="button-2-slide-2"></label>
-                <input type="radio" id="button-3-slide-2" name="controls"/>
-                <label for="button-3-slide-2"></label>
-                <input type="radio" id="button-4-slide-2" name="controls"/>
-                <label for="button-4-slide-2"></label>
-                <input type="radio" id="button-5-slide-2" name="controls"/>
-                <label for="button-5-slide-2"></label>
-                <label for="button-1-slide-2" class="arrows2" id="arrow-1-slide-2">></label>
-                <label for="button-2-slide-2" class="arrows2" id="arrow-2-slide-2">></label>
-                <label for="button-3-slide-2" class="arrows2" id="arrow-3-slide-2">></label>
-                <label for="button-4-slide-2" class="arrows2" id="arrow-4-slide-2">></label>
-                <label for="button-5-slide-2" class="arrows2" id="arrow-5-slide-2">></label>
-                <div id="slideshow-inner2">
-                    <ul>
-                        <li id="slide1">
-                            <img style="width: 640px; height: 320px;" src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f" />
-                            <div class="description2">
-                                <input type="checkbox" id="show-description-12"/>
-                                <label for="show-description-12" class="show-description2-label" style="font-size: 2vh;">?</label>
-                                <div class="description2-text">
-                                    <h2>Banner do Jogo Minecraft</h2>
-                                    <p>Um banner com temática e nome do Jogo Minecraft.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="slide2">
-                            <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/655/141/full/Novo_Projeto.png?1699030257" />
-                            <div class="description2">
-                                <input type="checkbox" id="show-description-22"/>
-                                <label for="show-description-22" class="show-description2-label" style="font-size: 2vh;">?</label>
-                                <div class="description2-text">
-                                    <h2>Imagem do Clube do Jogo Minecraft</h2>
-                                    <p>Imagem retirada pela Liderança do Clube Juvenil Gameficação do Menu do Jogo Minecraft</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="slide3">
-                            <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/655/144/full/Novo_Projeto.png?1699030460" />
-                            <div class="description2">
-                                <input type="checkbox" id="show-description-32"/>
-                                <label for="show-description-32" class="show-description2-label" style="font-size: 2vh;">?</label>
-                                <div class="description2-text">
-                                    <h2>Imagem do Clube do Jogo Minecraft</h2>
-                                    <p>Imagem retirada pela Liderança do Clube Juvenil Gameficação da construção de uma casa dentro do Jogo Minecraft</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="slide4">
-                            <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/655/146/full/Novo_Projeto.png?1699030605" />
-                            <div class="description2">
-                                <input type="checkbox" id="show-description-42"/>
-                                <label for="show-description-42" class="show-description2-label" style="font-size: 2vh;">?</label>
-                                <div class="description2-text">
-                                    <h2>Imagem do Clube do Jogo Minecraft</h2>
-                                    <p>Imagem retirada pela Liderança do Clube Juvenil Gameficação de uma casa constrída dentro do Jogo Minecraft</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="slide5">
-                            <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" />
-                            <div class="description2">
-                                <input type="checkbox" id="show-description-52"/>
-                                <label for="show-description-52" class="show-description2-label" style="font-size: 2vh;">?</label>
-                                <div class="description2-text">
-                                    <h2>Gameficação - Games</h2>
-                                    <p>o Jogo Minecraft foi disponibilizado pelo Clube Juvenil Gameficação em sua aba Games. Clique <a href="https://mess.eu.org/play" target="_blank">aqui</a> para acessá-lo.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        <div class="slideshow-container" style="top: 710px;">
+            <div class="mySlides3">
+              <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f" style="width:580px; height: 320px;">
             </div>
+          
+            <div class="mySlides3">
+              <img src="https://uploaddeimagens.com.br/images/004/655/141/full/Novo_Projeto.png?1699030257" style="width:580px; height: 320px;">
+            </div>
+          
+            <div class="mySlides3">
+                <img src="https://uploaddeimagens.com.br/images/004/655/144/full/Novo_Projeto.png?1699030460" style="width:580px; height: 320px;">
+            </div>
+            
+            <div class="mySlides3">
+                <img src="https://uploaddeimagens.com.br/images/004/655/146/full/Novo_Projeto.png?1699030605" style="width:580px; height: 320px;">
+              </div>
+
+              <div class="mySlides3">
+                <img src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" style="width:580px; height: 320px;">
+              </div>
+          
+            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+          </div>
+          <div style="text-align:center; position: absolute; top: 1375px; left: 22.5%;" >
+            <span class="dot3" onclick="currentSlide(1, 2)"></span>
+            <span class="dot3" onclick="currentSlide(2, 2)"></span>
+            <span class="dot3" onclick="currentSlide(3, 2)"></span>
+            <span class="dot3" onclick="currentSlide(4, 2)"></span>
+            <span class="dot3" onclick="currentSlide(5, 2)"></span>
         </div>
         <p class="sitedescricao closed" id="sitedescrição" style="top: 1600px;">Na segunda aula<br>do Clube Juvenil<br>
             Gameficação, foi trabalhado<br>o mesmo jogo da aula<br>anterior, porém, agora,
             <br>com o objetivo de ir<br>para a dimensão Nether<br>dentro do jogo. Também foi<br>introduzido nessa aula
             <br>as Gamercoins, uma<br>maneira de contabilizar<br>pontos e prêmios entre os<br>alunos.</p>
-            <div id="slide-3" class="closed" style="top: 1600px;">            
-                <div id="slideshow-wrap3">
-                    <input type="radio" id="button-1-slide-3" name="controls" checked="checked"/>
-                    <label for="button-1-slide-3"></label>
-                    <input type="radio" id="button-2-slide-3" name="controls"/>
-                    <label for="button-2-slide-3"></label>
-                    <input type="radio" id="button-3-slide-3" name="controls"/>
-                    <label for="button-3-slide-3"></label>
-                    <input type="radio" id="button-4-slide-3" name="controls"/>
-                    <label for="button-4-slide-3"></label>
-                    <input type="radio" id="button-5-slide-3" name="controls"/>
-                    <label for="button-5-slide-3"></label>
-                    <label for="button-1-slide-3" class="arrows3" id="arrow-1-slide-3">></label>
-                    <label for="button-2-slide-3" class="arrows3" id="arrow-2-slide-3">></label>
-                    <label for="button-3-slide-3" class="arrows3" id="arrow-3-slide-3">></label>
-                    <label for="button-4-slide-3" class="arrows3" id="arrow-4-slide-3">></label>
-                    <label for="button-5-slide-3" class="arrows3" id="arrow-5-slide-3">></label>
-                    <div id="slideshow-inner3">
-                        <ul>
-                            <li id="slide1">
-                                <img style="width: 640px; height: 320px;" src="https://mundodrix.com.br/site/wp-content/uploads/2020/06/Minecraft-1.16-Nether-Update.jpg" />
-                                <div class="description3">
-                                    <input type="checkbox" id="show-description-13"/>
-                                    <label for="show-description-13" class="show-description3-label" style="font-size: 2vh;">?</label>
-                                    <div class="description3-text">
-                                        <h2>Banner do Jogo Minecraft</h2>
-                                        <p>Um banner da atualização da dimensão do Nether do Jogo Minecraft.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="slide2">
-                                <img style="width: 640px; height: 320px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiDS7AjLwp989wCZjfZVgZgg_huBpnHygrmA0Nd5be_CoalUpIEZ3kvVGGEnYCxXMc3o8&usqp=CAU" />
-                                <div class="description3">
-                                    <input type="checkbox" id="show-description-23"/>
-                                    <label for="show-description-23" class="show-description3-label" style="font-size: 2vh;">?</label>
-                                    <div class="description3-text">
-                                        <h2>Imagem do portal no Jogo Minecraft</h2>
-                                        <p>Imagem do portal do Nether pronto dentro do Jogo Minecraft</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="slide3">
-                                <iframe width="640" height="320" src="https://www.youtube.com/embed/9Kz-B0MHVak" title="Vídeo de Anúncio da GamerCoin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                <div class="description3">
-                                    <input type="checkbox" id="show-description-33"/>
-                                    <label for="show-description-33" class="show-description3-label" style="font-size: 2vh;">?</label>
-                                    <div class="description3-text">
-                                        <h2>Vídeo de apresentação das Gamercoins</h2>
-                                        <p>Vídeo postado no canal do Clube Juvenil Gameficação da apresentação das Gamercoins</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="slide4">
-                                <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/655/696/full/Gamercoins_Lista_Banner.png?1699104485" />
-                                <div class="description3">
-                                    <input type="checkbox" id="show-description-43"/>
-                                    <label for="show-description-43" class="show-description3-label" style="font-size: 2vh;">?</label>
-                                    <div class="description3-text">
-                                        <h2>Lista de Gamercoins do Clube Juvenil Gameficação</h2>
-                                        <p>Lista de Gamercoins oficial do Clube Juvenil Gameficação</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="slide5">
-                                <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" />
-                                <div class="description3">
-                                    <input type="checkbox" id="show-description-53"/>
-                                    <label for="show-description-53" class="show-description3-label" style="font-size: 2vh;">?</label>
-                                    <div class="description3-text">
-                                        <h2>Gameficação - Games</h2>
-                                        <p>o Jogo Minecraft foi disponibilizado pelo Clube Juvenil Gameficação em sua aba Games. Clique <a href="https://mess.eu.org/play" target="_blank">aqui</a> para acessá-lo.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+            <div class="slideshow-container" style="top: 990px;">
+                    <div class="mySlides2">
+                      <img src="https://mundodrix.com.br/site/wp-content/uploads/2020/06/Minecraft-1.16-Nether-Update.jpg" style="width:580px; height: 320px;">
                     </div>
+                  
+                    <div class="mySlides2">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiDS7AjLwp989wCZjfZVgZgg_huBpnHygrmA0Nd5be_CoalUpIEZ3kvVGGEnYCxXMc3o8&usqp=CAU" style="width:580px; height: 320px;">
+                    </div>
+                  
+                    <div class="mySlides2">
+                        <iframe width="580" height="320" src="https://www.youtube.com/embed/9Kz-B0MHVak" title="Vídeo de Anúncio da GamerCoin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="mySlides2">
+                        <img src="https://uploaddeimagens.com.br/images/004/655/696/full/Gamercoins_Lista_Banner.png?1699104485" style="width:580px; height: 320px;">
+                      </div>
+
+                      <div class="mySlides2">
+                        <img src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" style="width:580px; height: 320px;">
+                      </div>
+                  
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                  </div>
+                  <div style="text-align:center; position: absolute; top: 1975px; left: 22.5%;" >
+                    <span class="dot2" onclick="currentSlide(1, 1)"></span>
+                    <span class="dot2" onclick="currentSlide(2, 1)"></span>
+                    <span class="dot2" onclick="currentSlide(3, 1)"></span>
+                    <span class="dot2" onclick="currentSlide(4, 1)"></span>
+                    <span class="dot2" onclick="currentSlide(5, 1)"></span>
                 </div>
-            </div>
             <p class="sitedescricao closed" id="sitedescrição" style="top: 2200px;">Na terceira aula<br>do Clube Juvenil<br>
                 Gameficação, foi trabalhado<br>o mesmo jogo da aula<br>anterior, porém, agora,
                 <br>com o objetivo de ir<br>para a dimensão The End<br>dentro do jogo. Também foi<br>introduzido nessa aula
                 <br>mais Gamercoins, com uma<br>nova maneira de contabilizar<br>pontos com as Gamercoins,<br>através de sites.</p>
-                <div id="slide-4" class="closed" style="top: 2200px;">            
-                    <div id="slideshow-wrap4">
-                        <input type="radio" id="button-1-slide-4" name="controls" checked="checked"/>
-                        <label for="button-1-slide-4"></label>
-                        <input type="radio" id="button-2-slide-4" name="controls"/>
-                        <label for="button-2-slide-4"></label>
-                        <input type="radio" id="button-3-slide-4" name="controls"/>
-                        <label for="button-3-slide-4"></label>
-                        <input type="radio" id="button-4-slide-4" name="controls"/>
-                        <label for="button-4-slide-4"></label>
-                        <input type="radio" id="button-5-slide-4" name="controls"/>
-                        <label for="button-5-slide-4"></label>
-                        <label for="button-1-slide-4" class="arrows4" id="arrow-1-slide-4">></label>
-                        <label for="button-2-slide-4" class="arrows4" id="arrow-2-slide-4">></label>
-                        <label for="button-3-slide-4" class="arrows4" id="arrow-3-slide-4">></label>
-                        <label for="button-4-slide-4" class="arrows4" id="arrow-4-slide-4">></label>
-                        <label for="button-5-slide-4" class="arrows4" id="arrow-5-slide-4">></label>
-                        <div id="slideshow-inner4">
-                            <ul>
-                                <li id="slide1">
-                                    <img style="width: 640px; height: 320px;" src="https://www.minecraft.net/content/dam/archive/bd0ea75cd9da517467cc637efb30950f-videocover.jpg" />
-                                    <div class="description4">
-                                        <input type="checkbox" id="show-description-14"/>
-                                        <label for="show-description-14" class="show-description4-label" style="font-size: 2vh;">?</label>
-                                        <div class="description4-text">
-                                            <h2>Banner do Jogo Minecraft</h2>
-                                            <p>Um banner da dimensão do The End do Jogo Minecraft.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li id="slide2">
-                                    <img style="width: 640px; height: 320px;" src="https://www.gamepur.com/wp-content/uploads/2020/10/06153315/minecraft-ender-portal.jpg" />
-                                    <div class="description4">
-                                        <input type="checkbox" id="show-description-24"/>
-                                        <label for="show-description-24" class="show-description4-label" style="font-size: 2vh;">?</label>
-                                        <div class="description4-text">
-                                            <h2>Imagem do portal no Jogo Minecraft</h2>
-                                            <p>Imagem do portal do The End pronto dentro do Jogo Minecraft</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li id="slide3">
-                                    <iframe width="640" height="320" src="https://www.youtube.com/embed/VpOJzYtGwwY" title="Gameficação Podcast 🎙️ #1 - Vice-Líder 🎮" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                    <div class="description4">
-                                        <input type="checkbox" id="show-description-34"/>
-                                        <label for="show-description-34" class="show-description4-label" style="font-size: 2vh;">?</label>
-                                        <div class="description4-text">
-                                            <h2>Vídeo de apresentação do Gameficação PodCast</h2>
-                                            <p>Vídeo postado no canal do Clube Juvenil Gameficação da apresentação do Gameficação Podcast</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li id="slide4">
-                                    <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/650/177/full/Lideran%C3%A7a_banner.png?1698496615" />
-                                    <div class="description4">
-                                        <input type="checkbox" id="show-description-44"/>
-                                        <label for="show-description-44" class="show-description4-label" style="font-size: 2vh;">?</label>
-                                        <div class="description4-text">
-                                            <h2>Integrantes do Primeiro Gameficação Podcast</h2>
-                                            <p>Integrantes do Primeiro Gameficação Podcast, sendo entre a liderança</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li id="slide5">
-                                    <img style="width: 640px; height: 320px;" src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" />
-                                    <div class="description4">
-                                        <input type="checkbox" id="show-description-54"/>
-                                        <label for="show-description-54" class="show-description4-label" style="font-size: 2vh;">?</label>
-                                        <div class="description4-text">
-                                            <h2>Gameficação - Games</h2>
-                                            <p>o Jogo Minecraft foi disponibilizado pelo Clube Juvenil Gameficação em sua aba Games. Clique <a href="https://mess.eu.org/play" target="_blank">aqui</a> para acessá-lo.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="slideshow-container" style="top: 1260px;">
+                    <div class="mySlides1">
+                      <img src="https://www.minecraft.net/content/dam/archive/bd0ea75cd9da517467cc637efb30950f-videocover.jpg" style="width:580px; height: 320px;">
                     </div>
+                  
+                    <div class="mySlides1">
+                      <img src="https://www.gamepur.com/wp-content/uploads/2020/10/06153315/minecraft-ender-portal.jpg" style="width:580px; height: 320px;">
+                    </div>
+                  
+                    <div class="mySlides1">
+                        <iframe width="580" height="320" src="https://www.youtube.com/embed/VpOJzYtGwwY" title="Gameficação Podcast 🎙️ #1 - Vice-Líder 🎮" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="mySlides1">
+                        <img src="https://uploaddeimagens.com.br/images/004/650/177/full/Lideran%C3%A7a_banner.png?1698496615" style="width:580px; height: 320px;">
+                      </div>
+
+                      <div class="mySlides1">
+                        <img src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" style="width:580px; height: 320px;">
+                      </div>
+                  
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                  </div>
+                  <div style="text-align:center; position: absolute; top: 2565px; left: 22.5%;" >
+                    <span class="dot1" onclick="currentSlide(1, 0)"></span>
+                    <span class="dot1" onclick="currentSlide(2, 0)"></span>
+                    <span class="dot1" onclick="currentSlide(3, 0)"></span>
+                    <span class="dot1" onclick="currentSlide(4, 0)"></span>
+                    <span class="dot1" onclick="currentSlide(5, 0)"></span>
                 </div>
+                  <script>
+                     let slideIndex = [1,1,1,1];
+    let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"];
+    let dotId = ["dot1", "dot2", "dot3", "dot4"];
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+    showSlides(1, 3);
+    
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function currentSlide(n, no) {
+      showSlides(slideIndex[no] = n, no);
+    }
+    
+    function showSlides(n, no) {
+      let i;
+      let x = document.getElementsByClassName(slideId[no]);
+      let dots = document.getElementsByClassName(dotId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+      dots[slideIndex[no]-1].className += " active";
+    }
+                    </script>
 </div>
 
         <div id="redesicones">
@@ -3617,7 +3305,7 @@ function ativarConfiguracoes2() {
               <svg xmlns="http://www.w3.org/2000/svg" id="youtube-icon" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16" onclick="window.location.href='https://www.youtube.com/@ClubeJuvenil-Gameficacao';"> <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/> </svg>           
         </div>
 
-        <div id="avaliacao" style="position: absolute; top: 3600px; width: 1000px; /* Largura inicial */
+        <div id="avaliacao" style="position: absolute; top: 3600px; width: 800px; /* Largura inicial */
         max-width: 50%; /* Permite que a largura se ajuste automaticamente */">
     <h1 id="avaliacaotexto">Avaliação</h1>
     <div id="divbotaoavaliacao">
