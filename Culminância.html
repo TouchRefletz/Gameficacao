@@ -47,7 +47,21 @@
   transition: opacity 1s ease;
 }
 
+
+
         }
+        
+        @media (max-width: 1876px) {
+            .dot1, .dot2, .dot3, .dot4, .dot5 {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+}
+@media (min-width: 2901px) {
+            .dot1, .dot2, .dot3, .dot4, .dot5 {
+  opacity: 0;
+  transition: opacity 1s ease;
+}}
 
         #slide.open {
   opacity: 0;
@@ -425,7 +439,7 @@
   height: 575px;
   position: absolute;
   left: 50%;
-  top: 2800px;
+  top: 3600px;
   transform: translateX(-50%);
   background-color: rgb(107, 255, 84);
   border-radius: 25px;
@@ -2612,8 +2626,43 @@ input[type=radio]#button-5-slide-3:checked~.arrows3#arrow-4-slide-3 { left: -73p
 }
 
 * {box-sizing: border-box}
-.mySlides1, .mySlides2, .mySlides3, .mySlides4 {display: none}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {display: none}
 img {vertical-align: middle;}
+
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {
+  position: relative;
+}
+
+.mySlides1 button, .mySlides2 button, .mySlides3 button, .mySlides4 button, .mySlides5 button {
+        position: absolute;
+        bottom: 290px;
+        right: 967px;
+        display: none;
+    }
+
+    .mySlides1:hover button, .mySlides2:hover button, .mySlides3:hover button, .mySlides4:hover button, .mySlides5:hover button {
+        display: block;
+    }
+
+    .mySlides1 .overlay-text, .mySlides2 .overlay-text, .mySlides3 .overlay-text, .mySlides4 .overlay-text, .mySlides5 .overlay-text {
+        position: absolute;
+        top: 165;
+        left: 300 ;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        display: none;
+        width:500px; height: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-family: 'vt323', monospace;
+    }
+
+    .mySlides1 img.darken, .mySlides1 iframe.darken, .mySlides2 img.darken, .mySlides2 iframe.darken, .mySlides3 img.darken, .mySlides3 iframe.darken, .mySlides4 img.darken, .mySlides4 iframe.darken, .mySlides5 img.darken, .mySlides5 iframe.darken {
+    filter: brightness(30%);
+}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -2652,7 +2701,7 @@ img {vertical-align: middle;}
   color: black;
 }
 
-.dot1, .dot2, .dot3, .dot4 {
+.dot1, .dot2, .dot3, .dot4, .dot5 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -2663,7 +2712,16 @@ img {vertical-align: middle;}
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover {
+.dot-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  left: -12%;
+  width: 580px;
+  transition: opacity 1s ease;
+}
+
+.active, .dot:hover, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover {
   background-color: #717171;
 }
     </style>
@@ -3127,34 +3185,45 @@ function ativarConfiguracoes2() {
             <div class="slideshow-container" style="top: 425px;">
                 <div class="mySlides4">
                   <img src="https://uploaddeimagens.com.br/images/004/650/171/full/banner.png?1698495422" style="width:580px; height: 320px;">
+                  <button onclick="toggleText(this)">🔍</button>
+                  <div class="overlay-text">Logo em banner oficial do Clube Juvenil Gameficação</div>
                 </div>
               
                 <div class="mySlides4">
                   <iframe width="580" height="320" src="https://www.youtube.com/embed/mjPilAQZoy8" title="Vídeo de Apresentação do Clube Juvenil de Gameficação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>" />
+                  <button onclick="toggleText(this)">🔍</button>
+                  <div class="overlay-text">Vídeo de Apresentação do Clube Juvenil Gameficação</div>
                 </div>
               
                 <div class="mySlides4">
                     <img src="https://uploaddeimagens.com.br/images/004/650/175/full/bate-papo_banner.png?1698496083" style="width:580px; height: 320px;">
+                    <button onclick="toggleText(this)">🔍</button>
+                    <div class="overlay-text">Banner do <a href="Bate-Papo.html" target="_blank" style="color: white;">Gameficação Bate-Papo</a></div>
                 </div>
                 
                 <div class="mySlides4">
                     <img src="https://uploaddeimagens.com.br/images/004/650/177/full/Lideran%C3%A7a_banner.png?1698496615" style="width:580px; height: 320px;">
+                    <button onclick="toggleText(this)">🔍</button>
+                    <div class="overlay-text">Banner da liderança do Clube Gameficação</div>
                   </div>
     
                   <div class="mySlides4">
                     <img src="https://uploaddeimagens.com.br/images/004/650/180/full/Games_banner.png?1698496965" style="width:580px; height: 320px;">
+                    <button onclick="toggleText(this)">🔍</button>
+                    <div class="overlay-text">Banner do <a href="Todos os Jogos.html" target="_blank" style="color: white;">Gameficação Games</a></div>
                   </div>
               
                 <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
               </div>
-              <div style="text-align:center; position: absolute; top: 775px; left: 22.5%;" >
+              <div class="dot-container" style="top: 455px;">
+              <div>
                 <span class="dot4" onclick="currentSlide(1, 3)"></span>
                 <span class="dot4" onclick="currentSlide(2, 3)"></span>
                 <span class="dot4" onclick="currentSlide(3, 3)"></span>
                 <span class="dot4" onclick="currentSlide(4, 3)"></span>
                 <span class="dot4" onclick="currentSlide(5, 3)"></span>
-            </div>
+            </div></div>
     <p class="sitedescricao closed" id="sitedescrição" style="top: 1000px;">Na primeira aula<br>do Clube Juvenil<br>
         Gameficação, foi trabalhado<br>o conteúdo dentro do jogo<br>Minecraft, e como
         <br>construir uma pequena<br>casa dentro do jogo,<br>utilizando os conhecimentos<br>dos alunos para
@@ -3162,34 +3231,45 @@ function ativarConfiguracoes2() {
         <div class="slideshow-container" style="top: 710px;">
             <div class="mySlides3">
               <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f" style="width:580px; height: 320px;">
+              <button onclick="toggleText(this)">🔍</button>
+                    <div class="overlay-text">Banner do jogo Minecraft</div>
             </div>
           
             <div class="mySlides3">
               <img src="https://uploaddeimagens.com.br/images/004/655/141/full/Novo_Projeto.png?1699030257" style="width:580px; height: 320px;">
+              <button onclick="toggleText(this)">🔍</button>
+              <div class="overlay-text">Foto do jogo Minecraft no Clube Juvenil</div>
             </div>
           
             <div class="mySlides3">
                 <img src="https://uploaddeimagens.com.br/images/004/655/144/full/Novo_Projeto.png?1699030460" style="width:580px; height: 320px;">
+                <button onclick="toggleText(this)">🔍</button>
+              <div class="overlay-text">Foto do jogo Minecraft no Clube Juvenil</div>
             </div>
             
             <div class="mySlides3">
                 <img src="https://uploaddeimagens.com.br/images/004/655/146/full/Novo_Projeto.png?1699030605" style="width:580px; height: 320px;">
+                <button onclick="toggleText(this)">🔍</button>
+              <div class="overlay-text">Foto do jogo Minecraft no Clube Juvenil</div>
               </div>
 
               <div class="mySlides3">
                 <img src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" style="width:580px; height: 320px;">
+                <button onclick="toggleText(this)">🔍</button>
+                <div class="overlay-text">Jogo disponível no <a href="Todos os Jogos.html" target="_blank" style="color: white;">Gameficação Games</a></div>
               </div>
           
             <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
             <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
           </div>
-          <div style="text-align:center; position: absolute; top: 1375px; left: 22.5%;" >
+          <div class="dot-container" style="top: 745px;">
+          <div>
             <span class="dot3" onclick="currentSlide(1, 2)"></span>
             <span class="dot3" onclick="currentSlide(2, 2)"></span>
             <span class="dot3" onclick="currentSlide(3, 2)"></span>
             <span class="dot3" onclick="currentSlide(4, 2)"></span>
             <span class="dot3" onclick="currentSlide(5, 2)"></span>
-        </div>
+        </div></div>
         <p class="sitedescricao closed" id="sitedescrição" style="top: 1600px;">Na segunda aula<br>do Clube Juvenil<br>
             Gameficação, foi trabalhado<br>o mesmo jogo da aula<br>anterior, porém, agora,
             <br>com o objetivo de ir<br>para a dimensão Nether<br>dentro do jogo. Também foi<br>introduzido nessa aula
@@ -3197,34 +3277,45 @@ function ativarConfiguracoes2() {
             <div class="slideshow-container" style="top: 990px;">
                     <div class="mySlides2">
                       <img src="https://mundodrix.com.br/site/wp-content/uploads/2020/06/Minecraft-1.16-Nether-Update.jpg" style="width:580px; height: 320px;">
+                      <button onclick="toggleText(this)">🔍</button>
+                      <div class="overlay-text">Banner do jogo Minecraft (Atualização Nether)</div>
                     </div>
                   
                     <div class="mySlides2">
                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiDS7AjLwp989wCZjfZVgZgg_huBpnHygrmA0Nd5be_CoalUpIEZ3kvVGGEnYCxXMc3o8&usqp=CAU" style="width:580px; height: 320px;">
+                      <button onclick="toggleText(this)">🔍</button>
+                      <div class="overlay-text">Portal para Nether no Minecraft</div>
                     </div>
                   
                     <div class="mySlides2">
                         <iframe width="580" height="320" src="https://www.youtube.com/embed/9Kz-B0MHVak" title="Vídeo de Anúncio da GamerCoin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <button onclick="toggleText(this)">🔍</button>
+                      <div class="overlay-text">Vídeo de Apresentação das GamerCoins no Clube</div>
                     </div>
                     
                     <div class="mySlides2">
                         <img src="https://uploaddeimagens.com.br/images/004/655/696/full/Gamercoins_Lista_Banner.png?1699104485" style="width:580px; height: 320px;">
+                        <button onclick="toggleText(this)">🔍</button>
+                      <div class="overlay-text">Tabela de GamerCoins</div>
                       </div>
 
                       <div class="mySlides2">
                         <img src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" style="width:580px; height: 320px;">
+                        <button onclick="toggleText(this)">🔍</button>
+                        <div class="overlay-text">Jogo disponível no <a href="Todos os Jogos.html" target="_blank" style="color: white;">Gameficação Games</a></div>
                       </div>
                   
                     <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
                   </div>
-                  <div style="text-align:center; position: absolute; top: 1975px; left: 22.5%;" >
+                  <div class="dot-container" style="top: 1025px;">
+                  <div>
                     <span class="dot2" onclick="currentSlide(1, 1)"></span>
                     <span class="dot2" onclick="currentSlide(2, 1)"></span>
                     <span class="dot2" onclick="currentSlide(3, 1)"></span>
                     <span class="dot2" onclick="currentSlide(4, 1)"></span>
                     <span class="dot2" onclick="currentSlide(5, 1)"></span>
-                </div>
+                </div></div>
             <p class="sitedescricao closed" id="sitedescrição" style="top: 2200px;">Na terceira aula<br>do Clube Juvenil<br>
                 Gameficação, foi trabalhado<br>o mesmo jogo da aula<br>anterior, porém, agora,
                 <br>com o objetivo de ir<br>para a dimensão The End<br>dentro do jogo. Também foi<br>introduzido nessa aula
@@ -3232,46 +3323,115 @@ function ativarConfiguracoes2() {
                 <div class="slideshow-container" style="top: 1260px;">
                     <div class="mySlides1">
                       <img src="https://www.minecraft.net/content/dam/archive/bd0ea75cd9da517467cc637efb30950f-videocover.jpg" style="width:580px; height: 320px;">
+                      <button onclick="toggleText(this)">🔍</button>
+                      <div class="overlay-text">Banner do jogo Minecraft (The End)</div>
                     </div>
                   
                     <div class="mySlides1">
                       <img src="https://www.gamepur.com/wp-content/uploads/2020/10/06153315/minecraft-ender-portal.jpg" style="width:580px; height: 320px;">
+                      <button onclick="toggleText(this)">🔍</button>
+                      <div class="overlay-text">Portal para The End no Minecraft</div>
                     </div>
                   
                     <div class="mySlides1">
                         <iframe width="580" height="320" src="https://www.youtube.com/embed/VpOJzYtGwwY" title="Gameficação Podcast 🎙️ #1 - Vice-Líder 🎮" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <button onclick="toggleText(this)">🔍</button>
+                        <div class="overlay-text">Episódio 1 do Gameficação Podcast</div>
                     </div>
                     
                     <div class="mySlides1">
                         <img src="https://uploaddeimagens.com.br/images/004/650/177/full/Lideran%C3%A7a_banner.png?1698496615" style="width:580px; height: 320px;">
+                        <button onclick="toggleText(this)">🔍</button>
+                        <div class="overlay-text">Participantes do Gameficação Podcast</div>
                       </div>
 
                       <div class="mySlides1">
                         <img src="https://uploaddeimagens.com.br/images/004/655/165/full/Games_Minecraft.png?1699032773" style="width:580px; height: 320px;">
+                        <button onclick="toggleText(this)">🔍</button>
+                        <div class="overlay-text">Jogo disponível no <a href="Todos os Jogos.html" target="_blank" style="color: white;">Gameficação Games</a></div>
                       </div>
                   
                     <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
                   </div>
-                  <div style="text-align:center; position: absolute; top: 2565px; left: 22.5%;" >
+                  <div class="dot-container" style="top: 1295px;">
+                  <div>
                     <span class="dot1" onclick="currentSlide(1, 0)"></span>
                     <span class="dot1" onclick="currentSlide(2, 0)"></span>
                     <span class="dot1" onclick="currentSlide(3, 0)"></span>
                     <span class="dot1" onclick="currentSlide(4, 0)"></span>
                     <span class="dot1" onclick="currentSlide(5, 0)"></span>
-                </div>
+                </div></div>
+
+                <p class="sitedescricao closed" id="sitedescrição" style="top: 3000px;">Na quarta aula<br>do Clube Juvenil<br>
+                  Gameficação, foi trabalhado<br>um dia livre para<br>jogar qualquer jogo,
+                  <br>para teste e apreciação<br>de todos os jogos<br>disponíveis dentro do<br>catálogo do site. 
+                  <br>Após os alunos fizeram<br>uma redação do que<br>aprenderam no dia a troca<br>de GamerCoins como recompensa.</p>
+                  <div class="slideshow-container" style="top: 1670px;">
+                      <div class="mySlides5">
+                        <iframe width="580" height="320" src="https://www.youtube.com/embed/-XGRXfcpy10" title="Vídeo de anúncio do DIA LIVRE!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <button onclick="toggleText(this)">🔍</button>
+                        <div class="overlay-text">Vídeo de Anúncio do Dia Livre</div>
+                      </div>
+                    
+                      <div class="mySlides5">
+                        <img src="https://uploaddeimagens.com.br/images/004/650/180/full/Games_banner.png?1698496965" style="width:580px; height: 320px;">
+                        <button onclick="toggleText(this)">🔍</button>
+                        <div class="overlay-text">Site da <a href="Todos os Jogos.html" target="_blank" style="color: white;">Gameficação Games</a></div>
+                      </div>
+                      
+                      <div class="mySlides5">
+                        <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f" style="width:580px; height: 320px;">
+                        <button onclick="toggleText(this)">🔍</button>
+                              <div class="overlay-text">Banner do jogo Minecraft</div>
+                      </div>
+                    
+                      <div class="mySlides5">
+                        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/pt_BR/dlc/switch-dlc/cuphead-dlc/rom-bundle/cuphead-and-the-delicious-last-course/image" style="width:580px; height: 320px;">
+                          <button onclick="toggleText(this)">🔍</button>
+                          <div class="overlay-text">Banner do jogo Cuphead</div>
+                      </div>
+                      
+                      <div class="mySlides5">
+                          <img src="https://s2-techtudo.glbimg.com/mqdOkb4ptWhBpzx9h8qnM0Xerf4=/0x0:1199x669/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/N/4/EBhhtaSamfAaNNAArpMA/captura-de-tela-2019-02-15-as-11.21.04.png" style="width:580px; height: 320px;">
+                          <button onclick="toggleText(this)">🔍</button>
+                          <div class="overlay-text">Banner do jogo FIFA 19</div>
+                        </div>
+  
+                       
+                    
+                      <a class="prev" onclick="plusSlides(-1, 4)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1, 4)">&#10095;</a>
+                    </div>
+                    <div class="dot-container" style="top: 1705px;">
+                    <div>
+                      <span class="dot5" onclick="currentSlide(1, 4)"></span>
+                      <span class="dot5" onclick="currentSlide(2, 4)"></span>
+                      <span class="dot5" onclick="currentSlide(3, 4)"></span>
+                      <span class="dot5" onclick="currentSlide(4, 4)"></span>
+                      <span class="dot5" onclick="currentSlide(5, 4)"></span>
+                  </div></div>
                   <script>
-                     let slideIndex = [1,1,1,1];
-    let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"];
-    let dotId = ["dot1", "dot2", "dot3", "dot4"];
+                     let slideIndex = [1,1,1,1,1];
+    let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"];
+    let dotId = ["dot1", "dot2", "dot3", "dot4", "dot5"];
     showSlides(1, 0);
     showSlides(1, 1);
     showSlides(1, 2);
     showSlides(1, 3);
+    showSlides(1, 4);
     
     function plusSlides(n, no) {
       showSlides(slideIndex[no] += n, no);
     }
+
+    function toggleText(button) {
+    let slide = button.parentElement;
+    let text = slide.querySelector('.overlay-text');
+    let media = slide.querySelector('img, iframe');
+    text.style.display = text.style.display === 'block' ? 'none' : 'block';
+    media.classList.toggle('darken');
+}
     
     function currentSlide(n, no) {
       showSlides(slideIndex[no] = n, no);
@@ -3305,7 +3465,7 @@ function ativarConfiguracoes2() {
               <svg xmlns="http://www.w3.org/2000/svg" id="youtube-icon" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16" onclick="window.location.href='https://www.youtube.com/@ClubeJuvenil-Gameficacao';"> <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/> </svg>           
         </div>
 
-        <div id="avaliacao" style="position: absolute; top: 3600px; width: 800px; /* Largura inicial */
+        <div id="avaliacao" style="position: absolute; top: 4400px; width: 800px; /* Largura inicial */
         max-width: 50%; /* Permite que a largura se ajuste automaticamente */">
     <h1 id="avaliacaotexto">Avaliação</h1>
     <div id="divbotaoavaliacao">
