@@ -52,13 +52,13 @@
         }
         
         @media (max-width: 1876px) {
-            .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
+            .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7 {
   opacity: 0;
   transition: opacity 1s ease;
 }
 }
 @media (min-width: 2901px) {
-            .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
+            .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7 {
   opacity: 0;
   transition: opacity 1s ease;
 }}
@@ -439,7 +439,7 @@
   height: 575px;
   position: absolute;
   left: 50%;
-  top: 4200px;
+  top: 4800px;
   transform: translateX(-50%);
   background-color: rgb(107, 255, 84);
   border-radius: 25px;
@@ -2626,25 +2626,25 @@ input[type=radio]#button-5-slide-3:checked~.arrows3#arrow-4-slide-3 { left: -73p
 }
 
 * {box-sizing: border-box}
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6 {display: none}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {display: none}
 img {vertical-align: middle;}
 
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6 {
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
   position: relative;
 }
 
-.mySlides1 button, .mySlides2 button, .mySlides3 button, .mySlides4 button, .mySlides5 button, .mySlides6 button {
+.mySlides1 button, .mySlides2 button, .mySlides3 button, .mySlides4 button, .mySlides5 button, .mySlides6 button, .mySlides7 button {
         position: absolute;
         bottom: 290px;
         right: 967px;
         display: none;
     }
 
-    .mySlides1:hover button, .mySlides2:hover button, .mySlides3:hover button, .mySlides4:hover button, .mySlides5:hover button, .mySlides6:hover button {
+    .mySlides1:hover button, .mySlides2:hover button, .mySlides3:hover button, .mySlides4:hover button, .mySlides5:hover button, .mySlides6:hover button, .mySlides7:hover button {
         display: block;
     }
 
-    .mySlides1 .overlay-text, .mySlides2 .overlay-text, .mySlides3 .overlay-text, .mySlides4 .overlay-text, .mySlides5 .overlay-text, .mySlides6 .overlay-text {
+    .mySlides1 .overlay-text, .mySlides2 .overlay-text, .mySlides3 .overlay-text, .mySlides4 .overlay-text, .mySlides5 .overlay-text, .mySlides6 .overlay-text, .mySlides7 .overlay-text {
         position: absolute;
         top: 165;
         left: 300 ;
@@ -2659,7 +2659,7 @@ img {vertical-align: middle;}
         font-family: 'vt323', monospace;
     }
 
-    .mySlides1 img.darken, .mySlides1 iframe.darken, .mySlides2 img.darken, .mySlides2 iframe.darken, .mySlides3 img.darken, .mySlides3 iframe.darken, .mySlides4 img.darken, .mySlides4 iframe.darken, .mySlides5 img.darken, .mySlides5 iframe.darken, .mySlides6 img.darken, .mySlides6 iframe.darken {
+    .mySlides1 img.darken, .mySlides1 iframe.darken, .mySlides2 img.darken, .mySlides2 iframe.darken, .mySlides3 img.darken, .mySlides3 iframe.darken, .mySlides4 img.darken, .mySlides4 iframe.darken, .mySlides5 img.darken, .mySlides5 iframe.darken, .mySlides6 img.darken, .mySlides6 iframe.darken, .mySlides7 img.darken, .mySlides7 iframe.darken {
       filter: brightness(30%);
     }
 
@@ -2701,7 +2701,7 @@ img {vertical-align: middle;}
   color: black;
 }
 
-.dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
+.dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -2721,7 +2721,7 @@ img {vertical-align: middle;}
   transition: opacity 1s ease;
 }
 
-.active, .dot:hover, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover, .dot6:hover {
+.active, .dot:hover, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover, .dot6:hover, .dot7:hover {
   background-color: #717171;
 }
     </style>
@@ -3190,9 +3190,9 @@ function ativarConfiguracoes2() {
                 </div>
               
                 <div class="mySlides4">
-                  <iframe width="580" height="320" src="https://www.youtube.com/embed/mjPilAQZoy8" title="Vídeo de Apresentação do Clube Juvenil de Gameficação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>" />
+                  <img src="https://i.ytimg.com/vi/mjPilAQZoy8/maxresdefault.jpg" style="width:580px; height: 320px;">
                   <button onclick="toggleText(this)">🔍</button>
-                  <div class="overlay-text">Vídeo de Apresentação do Clube Juvenil Gameficação</div>
+                  <div class="overlay-text"><a href="https://www.youtube.com/watch?v=mjPilAQZoy8" target="_blank" style="color: white;">Vídeo de Apresentação do Clube Juvenil Gameficação</a></div>
                 </div>
               
                 <div class="mySlides4">
@@ -3288,9 +3288,9 @@ function ativarConfiguracoes2() {
                     </div>
                   
                     <div class="mySlides2">
-                        <iframe width="580" height="320" src="https://www.youtube.com/embed/9Kz-B0MHVak" title="Vídeo de Anúncio da GamerCoin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <img src="https://i.ytimg.com/vi/9Kz-B0MHVak/maxresdefault.jpg" style="width:580px; height: 320px;">
                         <button onclick="toggleText(this)">🔍</button>
-                      <div class="overlay-text">Vídeo de Apresentação das GamerCoins no Clube</div>
+                        <div class="overlay-text"><a href="https://www.youtube.com/watch?v=9Kz-B0MHVak" target="_blank" style="color: white;">Vídeo de Apresentação das GamerCoins no Clube</a></div>
                     </div>
                     
                     <div class="mySlides2">
@@ -3334,9 +3334,9 @@ function ativarConfiguracoes2() {
                     </div>
                   
                     <div class="mySlides1">
-                        <iframe width="580" height="320" src="https://www.youtube.com/embed/VpOJzYtGwwY" title="Gameficação Podcast 🎙️ #1 - Vice-Líder 🎮" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <img src="https://i.ytimg.com/vi/VpOJzYtGwwY/maxresdefault.jpg" style="width:580px; height: 320px;">
                         <button onclick="toggleText(this)">🔍</button>
-                        <div class="overlay-text">Episódio 1 do Gameficação Podcast</div>
+                        <div class="overlay-text"><a href="https://www.youtube.com/watch?v=VpOJzYtGwwY" target="_blank" style="color: white;">Episódio 1 do Gameficação Podcast</a></div>
                     </div>
                     
                     <div class="mySlides1">
@@ -3369,9 +3369,9 @@ function ativarConfiguracoes2() {
                   <br>Após os alunos fizeram<br>uma redação do que<br>aprenderam no dia a troca<br>de GamerCoins como recompensa.</p>
                   <div class="slideshow-container" style="top: 1670px;">
                       <div class="mySlides5">
-                        <iframe width="580" height="320" src="https://www.youtube.com/embed/-XGRXfcpy10" title="Vídeo de anúncio do DIA LIVRE!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <img src="https://i.ytimg.com/vi/-XGRXfcpy10/hqdefault.jpg" style="width:580px; height: 320px;">
                         <button onclick="toggleText(this)">🔍</button>
-                        <div class="overlay-text">Vídeo de Anúncio do Dia Livre</div>
+                        <div class="overlay-text"><a href="https://www.youtube.com/watch?v=-XGRXfcpy10" target="_blank" style="color: white;">Vídeo de Anúncio do Dia Livre</a></div>
                       </div>
                     
                       <div class="mySlides5">
@@ -3460,16 +3460,66 @@ function ativarConfiguracoes2() {
                         <span class="dot6" onclick="currentSlide(4, 5)"></span>
                         <span class="dot6" onclick="currentSlide(5, 5)"></span>
                     </div></div>
+
+                    <p class="sitedescricao closed" id="sitedescrição" style="top: 4200px;">Na sexta aula<br>do Clube Juvenil<br>
+                      Gameficação, foi trabalhado<br>jogar o jogo<br>Papa's Burgueria,
+                      <br>recompensando os alunos<br>com mais GamerCoins<br>e disponibilizando<br>a oportunidade de 
+                      <br>ganhar ainda mais<br> GamerCoins caso fosse <br>feita uma redação do que <br>o aluno aprendeu naquele dia.</p>
+                      <div class="slideshow-container" style="top: 2200px;">
+                          <div class="mySlides7">
+                            <img src="https://m.media-amazon.com/images/I/71Qnhy5SJUL.jpg" style="width:580px; height: 320px;">
+                            <button onclick="toggleText(this)">🔍</button>
+                            <div class="overlay-text">Banner do jogo Papa´s Hamburgueria</div>
+                          </div>
+                        
+                          <div class="mySlides7">
+                            <img src="https://play-lh.googleusercontent.com/TJGS78lqJESl_F5KQqBvbq1010653iVYhTG9OeqblxinrpTwFRl8oV8VWICUinyKs6aV=w526-h296-rw" style="width:580px; height: 320px;">
+                            <button onclick="toggleText(this)">🔍</button>
+                            <div class="overlay-text">Gameplay do jogo Papa´s Hamburgueria</div>
+                          </div>
+                          
+                          <div class="mySlides7">
+                            <img src="https://modyolo.com/wp-content/uploads/2022/10/papas-burgeria-to-go-6.jpg" style="width:580px; height: 320px;">
+                            <button onclick="toggleText(this)">🔍</button>
+                                  <div class="overlay-text">Gameplay do jogo Papa´s Hamburgueria</div>
+                          </div>
+                        
+                          <div class="mySlides7">
+                            <img src="https://temoscomida.files.wordpress.com/2010/12/screen3.jpg" style="width:580px; height: 320px;">
+                              <button onclick="toggleText(this)">🔍</button>
+                              <div class="overlay-text">Gameplay do jogo Papa´s Hamburgueria</div>
+                          </div>
+                          
+                          <div class="mySlides7">
+                            <img src="https://uploaddeimagens.com.br/images/004/660/778/full/Novo_Projeto.png?1699562331" style="width:580px; height: 320px;">
+                            <button onclick="toggleText(this)">🔍</button>
+                            <div class="overlay-text">Jogo disponível no <a href="Todos os Jogos.html" target="_blank" style="color: white;">Gameficação Games</a></div>
+                          </div>
+      
+                           
+                        
+                          <a class="prev" onclick="plusSlides(-1, 6)">&#10094;</a>
+                          <a class="next" onclick="plusSlides(1, 6)">&#10095;</a>
+                        </div>
+                        <div class="dot-container" style="top: 2235px;">
+                        <div>
+                          <span class="dot7" onclick="currentSlide(1, 6)"></span>
+                          <span class="dot7" onclick="currentSlide(2, 6)"></span>
+                          <span class="dot7" onclick="currentSlide(3, 6)"></span>
+                          <span class="dot7" onclick="currentSlide(4, 6)"></span>
+                          <span class="dot7" onclick="currentSlide(5, 6)"></span>
+                      </div></div>
                   <script>
-                     let slideIndex = [1,1,1,1,1,1];
-    let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6"];
-    let dotId = ["dot1", "dot2", "dot3", "dot4", "dot5", "dot6"];
+                     let slideIndex = [1,1,1,1,1,1,1];
+    let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7"];
+    let dotId = ["dot1", "dot2", "dot3", "dot4", "dot5", "dot6", "dot7"];
     showSlides(1, 0);
     showSlides(1, 1);
     showSlides(1, 2);
     showSlides(1, 3);
     showSlides(1, 4);
     showSlides(1, 5);
+    showSlides(1, 6);
     
     function plusSlides(n, no) {
       showSlides(slideIndex[no] += n, no);
@@ -3515,7 +3565,7 @@ function ativarConfiguracoes2() {
               <svg xmlns="http://www.w3.org/2000/svg" id="youtube-icon" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16" onclick="window.location.href='https://www.youtube.com/@ClubeJuvenil-Gameficacao';"> <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/> </svg>           
         </div>
 
-        <div id="avaliacao" style="position: absolute; top: 5000px; width: 800px; /* Largura inicial */
+        <div id="avaliacao" style="position: absolute; top: 5600px; width: 800px; /* Largura inicial */
         max-width: 50%; /* Permite que a largura se ajuste automaticamente */">
     <h1 id="avaliacaotexto">Avaliação</h1>
     <div id="divbotaoavaliacao">
